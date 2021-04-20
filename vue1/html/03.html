@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<div id="app">
+
+<h2>{{cou}}</h2>
+<button @click="add">+</button>
+<button @click="sub">-</button>
+</div>
+<script type="text/javascript" src="../js/vue.js"></script>
+<script type="text/javascript">
+	const app = new Vue({
+		el:'#app',
+		data:{
+			cou:0,
+			message:"你好",
+			move:['1','2','3','4']
+		},
+		methods:{
+			add:function(){
+				console.log('add被执行');
+				this.cou++
+			},
+			sub:function(){
+				console.log('sub被执行');
+				this.cou--
+			}
+		}
+	})
+</script>
+</body>
+</html>
